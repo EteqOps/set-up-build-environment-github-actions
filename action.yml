@@ -40,6 +40,7 @@ runs:
 
     - name: Variables
       id: vars
+      shell: bash #pwsh for Powershell
       run: |
         echo "RepositoryOwner=${{ github.repository_owner }}" >> $GITHUB_OUTPUT
         echo "DefaultBranch=main" >> $GITHUB_OUTPUT
