@@ -17,7 +17,7 @@ outputs:
   DefaultBranch:
     value: "${{ steps.vars.outputs.defaultBranch }}"
   CICDKey:
-    value: "${{ steps.vars.outputs.cicdKey }}"
+    value: "${{ steps.vars.outputs.CICDKey }}"
 
     
     
@@ -41,5 +41,5 @@ runs:
       run: |
         echo "repoOwner=${{ github.repository_owner }}" >> $GITHUB_OUTPUT
         echo "defaultBranch=main" >> $GITHUB_OUTPUT
-        echo "cicdKey=ManojCICDKey" >> $GITHUB_OUTPUT
+        echo "CICDKey=ManojCICDKey" >> $GITHUB_OUTPUT
 
