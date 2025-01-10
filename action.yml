@@ -2,25 +2,25 @@ name: Setup Build Environment
 
 inputs:
   pythonVersion:
-    description: Version of Python
+    description: "Version of Python"
     required: true
     default: '3.x'
     
   NodeJSVersion:
-    description: Version of NodeJS
+    description: "Version of NodeJS"
     required: false
     default: '18.x'
 
 outputs:
   repoOwner:
     description: "Repository Owner"
-    value: ${{ steps.vars.outputs.RepositoryOwner }}
+    value: "${{ steps.vars.outputs.RepositoryOwner }}"
   DefaultBranch:
     description: "Default Branch"
-    value: ${{ steps.vars.outputs.DefaultBranch }}
+    value: "${{ steps.vars.outputs.DefaultBranch }}"
   CICDKey:
     description: "CICD Key"
-    value: ${{ steps.vars.outputs.CICDKey }}
+    value: "${{ steps.vars.outputs.CICDKey }}"
     
 
     
