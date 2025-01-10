@@ -22,7 +22,6 @@ outputs:
     description: "CICD Key"
     value: "${{ steps.vars.outputs.CICDKey }}"
     
-
     
 runs:
   using: "composite"
