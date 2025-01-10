@@ -13,14 +13,12 @@ inputs:
 
 outputs:
   repoOwner:
-    description: "Repository Owner"
-    value: "${{ steps.vars.outputs.RepositoryOwner }}"
+    value: "${{ steps.vars.outputs.repoOwner }}"
   DefaultBranch:
-    description: "Default Branch"
-    value: "${{ steps.vars.outputs.DefaultBranch }}"
+    value: "${{ steps.vars.outputs.defaultBranch }}"
   CICDKey:
-    description: "CICD Key"
-    value: "${{ steps.vars.outputs.CICDKey }}"
+    value: "${{ steps.vars.outputs.cicdKey }}"
+
     
     
 runs:
@@ -41,6 +39,7 @@ runs:
       id: vars
       shell: bash #pwsh for Powershell
       run: |
-        echo "RepositoryOwner=${{ github.repository_owner }}" >> $GITHUB_OUTPUT
-        echo "DefaultBranch=main" >> $GITHUB_OUTPUT
-        echo "CICDKey=ManojCICDKey" >> $GITHUB_OUTPUT
+        echo "repoOwner=${{ github.repository_owner }}" >> $GITHUB_OUTPUT
+        echo "defaultBranch=main" >> $GITHUB_OUTPUT
+        echo "cicdKey=ManojCICDKey" >> $GITHUB_OUTPUT
+
